@@ -13,10 +13,8 @@ const Home = () => {
     }
     useEffect(() =>{
         console.log('use effect run ');
-        console.log(blogs);
-    },
-    []/*this array will make shure that hook right here onlyruns the fun after the
-    firts initial render thereaftre if the state changes it wont run the fun again*/);
+        console.log(name);
+    },[name]);
     return ( 
         <div className="home">
             <BlogList blogs={blogs} title="All Blogs!" handleDelete = {handleDelete }/>
